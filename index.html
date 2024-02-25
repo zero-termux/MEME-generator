@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MEME generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="manifest" href="favicon.ico">
+  </head>
+  <body>
+<div class="container">
+<nav class="navbar navbar-expand-lg bg-body">
+    <div class="container-fluid">
+     <h3 class="navbar-brand"><span class="logo">MEME</span> generator</h3>
+     <div class="ms-auto">
+       <i class="bi bi-emoji-smile-fill"></i>
+      </div>
+    </div>
+</nav>
+
+<center>
+<section class="judul mt-4 p-2">
+  <h1><span style="color: #f9ff1d;">MEME</span> WANGSAP</h1>
+  <p>meme generator ini terbatas, <span style="color: #f9ff1d;">jika anda mengiinginkan fitur lebih bagus buat sendiri gausah ribet</span></p>
+ <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Panduan user ?
+</button>
+</section>
+</center>
+<hr>
+<section class="isi mt-4 p-2 mb-3">
+  <div class="row">
+    <div class="col-md">
+      <form>
+ <div class="mb-3">
+  <label for="imageFileInput" class="form-label">*pilih gambar anda yang ingin dibuat meme</label>
+  <input class="form-control" type="file" id="imageFileInput">
+</div>
+
+<div class="mb-3">
+   <label for="topTextInput" class="form-label">teks atas gambar :</label>
+   <input class="form-control" type="text" id="topTextInput">
+</div>
+
+<div class="mb-3">
+   <label for="bottomTextInput" class="form-label">teks bawah gambar :</label>
+   <input class="form-control" type="text" id="bottomTextInput">
+</div>
+      </form>
+    </div>
+    <div class="col-md">
+     <center>
+     <div class="hasil mb-2">
+      <label for="meme" class="mb-2">Hasil meme :</label>
+      <canvas id="meme"></canvas>
+     </div>
+     <button type="button" class="btn btn-danger" id="download" style="display: none;"><i class="bi bi-download"></i>  unduh meme</button>
+     </center>
+    </div>
+  </div>
+</section>
+
+
+    <center>
+      <footer class="mt-5 mb-4">
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9ff1d" fill-opacity="1" d="M0,128L60,133.3C120,139,240,149,360,144C480,139,600,117,720,106.7C840,96,960,96,1080,122.7C1200,149,1320,203,1380,229.3L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+      <div class="feed">
+        <a href="https://github.com/zero-termux" target="_blank">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/m-abid-falih-08a4952aa?trk=contact-info" target="_blank" class="ms-2">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/afhxyy0_" target="_blank" class="ms-2">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="mailto: abidflh14@gmail.com" target="_blank" class="ms-2">
+          <i class="bi bi-envelope-at"></i>
+        </a>
+      </div>
+      </footer>
+      </center>    
+      
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Panduan</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li class="mb-1">Masukkan gambar yang ingin anda buat meme</li>
+          <li class="mb-1">tulis teks meme pada setiap input yang sudah ada</li>
+          <li class="mb-1">diharapkan untuk menulis teks jangan terlalu panjang karena web belum maksimal saya selaku devloper sedang berusaha mencari solusi untuk ini</li>
+          <li class="mb-1">jika teks belum muncul ke dalam gambar maka klik satu kali pada area gambar</li>
+          <li class="mb-1">Jika sudah selesai membuat anda bisa menyimpan ganbar dengan cara di download</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>   
+  
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
