@@ -89,3 +89,9 @@ form input {
     bottom: -100px!important;
   }
 }
+
+@media screen and (min-width: 1000px) {
+  svg {
+    bottom: -300px!important;
+  }
+}
